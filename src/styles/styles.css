@@ -1,0 +1,91 @@
+body {
+
+    font-family: "Roboto", sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.products {
+    display: grid;
+    gap: 2rem 1rem;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-title {
+    margin-bottom: 0;
+}
+
+.product-price-and-qty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-minus, .product-plus {
+    background-color: black;
+    border: none;
+    box-shadow: none;
+    color: white;
+    outline: none;
+    width: 30px;
+}
+
+.product-quantity {
+    max-width: 60px;
+    text-align: center;
+}
+
+/*
+Source - https://stackoverflow.com/a/4298216
+Posted by antonj, modified by community. See post 'Timeline' for change history
+Retrieved 2026-08-06, License - CC BY-SA 4.0
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.product-minus, .product-plus, .product-quantity {
+    height: 25px;
+    max-height: 25px;
+}
+
+.product-add {
+    background-color: black;
+    border: none;
+    box-shadow: none;
+    color: white;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
+
+@media (min-width: 769px) {
+    .products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+}
