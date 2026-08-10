@@ -46,6 +46,7 @@ async function prepareProductData(){
         image.src = productItem.img_src 
         title.textContent = productItem.title
         price.textContent = productItem.price
+        
 
 
         products.appendChild(clone);
@@ -67,5 +68,29 @@ async function prepareProductData(){
   }
 
 }
+
+// const product = document.querySelector('.product');
+// product.addEventListener('click', () => {
+//   sessionStorage.setItem("selectedProduct", JSON.stringify(product));
+//   window.location.href = "product.html";
+// })
+
+const openModal = document.querySelector('.product-cart-button')
+const modal = document.querySelector('.product-modal')
+const closeModal = document.querySelector('.product-close-modal')
+
+openModal.addEventListener("click", () =>{
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
+
+modal.addEventListener('click', (event)=> {
+  if(event.target == modal) {
+    modal.close()
+  }  
+});
 
 prepareProductData()

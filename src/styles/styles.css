@@ -1,5 +1,4 @@
 body {
-
     font-family: "Roboto", sans-serif;
 }
 
@@ -11,24 +10,69 @@ li {
     list-style: none;
 }
 
+
+nav {
+    
+}
+/* nav .product-cart-image {
+    position: relative;
+    font-size: 30px;
+    color: #333;
+    display: flex;
+}
+
+nav .product-cart-image .product-count {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    color: #ffff;
+    line-height: 20px;
+    text-align: center;
+    display: none;
+} */
+
+.product-cart-button {
+    display: flex;
+    justify-self: end;
+    cursor: pointer;
+    border: none;
+}
+
+.product-close-modal {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .products {
     display: grid;
     gap: 2rem 1rem;
 }
 
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
 .product-image {
     max-width: 100%;
     height: auto;
+    transition: 0.5s;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
 }
 
 .product-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: auto;
 }
 
 .product-title {
-    margin-bottom: 0;
+    margin: 0 auto;
 }
 
 .product-price-and-qty {
@@ -44,6 +88,7 @@ li {
     color: white;
     outline: none;
     width: 30px;
+    cursor: pointer;
 }
 
 .product-quantity {
@@ -51,6 +96,10 @@ li {
     text-align: center;
 }
 
+.product-add {
+    margin: 0 auto;
+    cursor: pointer;
+}
 /*
 Source - https://stackoverflow.com/a/4298216
 Posted by antonj, modified by community. See post 'Timeline' for change history
